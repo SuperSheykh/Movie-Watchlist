@@ -1,10 +1,9 @@
-import {renderEl, defaultAreaHtml, noresultHtml,sUrl, iUrl, updateLocalStorage, render } from "./utils.js"
+import {renderEl, myWatchlist,defaultAreaHtml, noresultHtml,sUrl, iUrl, updateLocalStorage, render } from "./utils.js"
 const searchIpt = document.getElementById('search-input')
 const searchBtn = document.getElementById('search-btn')
 
 
 // DEFAULT SETTINGS AND RENDERING
-let myWatchlist = ["tt1630029"]
 updateLocalStorage(myWatchlist)
 render(defaultAreaHtml)
 
@@ -49,15 +48,19 @@ searchBtn.addEventListener('click', (e) =>  {
 
 })
 
-// ADDING TO THE WATCHLIST AFTER SEARCH
+// HANDLING ADD / REMOVE BUTTON CLICK
 document.addEventListener('click', e => {
     if(e.target.dataset.movieId){
+        console.log(e.target)
         const movId = e.target.dataset.movieId
         if(!myWatchlist.includes(movId)){
+            e.target.innerHTML = `<img src="./images/icon-1.png" alt=""/>Remove`
             myWatchlist.push(movId)
-            updateLocalStorage(myWatchlist)
+        } else {
+            e.target.innerHTML = `<img src="./images/icon-2.png" alt=""/>Watchlist`
+            myWatchlist.splice(myWatchlist.indexOf(movId),1)
         }
-        console.log(myWatchlist)
+        updateLocalStorage(myWatchlist)
     }
 })
 
