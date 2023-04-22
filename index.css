@@ -1,0 +1,138 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    margin: 0;
+}
+/* TYPOGRAPHY */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #FFFFFF;
+}
+h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+h2{
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #2E2E2F;
+}
+p {
+    font-size: 0.9rem;
+}
+.mov-pic{
+    width: 100px;
+}
+.mov-title,
+.mov-subtitle{
+    color: #FFFFFF;
+}
+.mov-desc{
+    color: #A5A5A5;
+}
+
+
+/* LAYOUT */
+header {
+    background-image: url('images/image\ 36.png');
+    background-size: cover;
+    padding: 5rem 2.625rem;    
+}
+.title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-area a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.search-form {
+    background-color: #2E2E2F;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+/* POSITION RELATIVE TO HEADER */
+    position: absolute;
+    top: 11.5rem;
+    left: 2.625rem;
+    right: 2.625rem;
+}
+.search-form img {
+    width: 18px;
+    height: 18px;
+    margin-left: 19px;
+}
+.search-form input {
+    background-color: transparent;
+    flex-grow: 1;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #A5A5A5;
+    padding: 0 0.5em;
+}
+.search-form input:focus{
+    outline: none;
+    background-color: transparent;
+}
+.search-form button {
+    background-color: #4B4B4B;
+    font-size: 0.9rem;
+    color: white;
+    border: none;
+    padding: 0.8em 2em;
+    margin-left: auto;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+}
+
+.expo,
+.empty-list {
+    text-align: center;
+}
+
+.render-area{
+    padding: 3.8125rem 2.625rem;    
+
+}
+.movie{
+    display: flex;
+    align-items: center;
+    gap: 1em
+}
+.mov-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.mov-subtitle span{
+    font-size: 0.75rem;
+}
+.add-btn {
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: inherit;
+    font-size: 0.75rem;
+    padding-left: 2em;
+
+    cursor: pointer;
+}
+.add-btn img {
+    margin-right: 0.5em;
+    width: 12px;
+}
+.divider{
+    margin: 1.5rem 0;
+    border-top: 1px solid #2C2C2C;
+}
